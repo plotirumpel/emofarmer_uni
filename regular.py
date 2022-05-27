@@ -17,7 +17,7 @@ def regular_3(st):
 
 def regular_4(st):
     pair = re.compile(r'([\w]+)-([\w]+)',re.U)
-    for m in re.finditer(pair,str):
+    for m in re.finditer(pair,st):
         st = re.sub(m.group(2),m.group(1),st)
         st = re.sub(m.group(1),m.group(2),st,1)
     return st
