@@ -27,7 +27,7 @@ def regular_5(st):
     return len(cats.findall(st))
 
 def regular_6(st):
-    chislo = r'-\d+'
+    chislo = r'-?\d+'
     for m in re.findall(chislo,st):
         changed = int(m)+1
         st = re.sub(m, str(changed), st, 1)
